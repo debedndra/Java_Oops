@@ -1,30 +1,15 @@
-package com.Jsp.ArrayPrograms;
-import java.util.Arrays;
+package com.Jsp.StringProg;
 
-class A
-{
-	int i;
-	A(int i)
-	{
-		this.i=i;
-	}
-	public String toString()
-	{
-		return "i="+i;
-	}
-}
 public class Test_2 {
-public static void main(String[] args) {
-	A[] arr = new A[10];
-	arr[0]=new A(10);
-	arr[1]=new A(20);
-	arr[2]=new A(30);
-	arr[3]=new A(40);
-	arr[4]=new A(50);
-	for(A obj:arr)
+	public static void main(String[] args)
 	{
-		System.out.println(obj);
+		String s = "QSPIDERS";
+		char[] ch=s.toCharArray();
+		for(int i=0; i<ch.length; i++)
+		{
+			if(ch[i]=='I')
+				ch[i]='i';
+			System.out.println(ch[i]);
+		}
 	}
-	System.out.println(Arrays.toString(arr));
-}
 }

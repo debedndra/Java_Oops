@@ -1,54 +1,20 @@
-package com.Jsp.ArrayPrograms;
-interface I
-{
-	void m1();
-}
-class B implements I
-{
-	public void m1()
-	{
-		System.out.println("M1 in B");
-	}
-	public void m2()
-	{
-		System.out.println("M2 in B");
-	}
-}
-class C implements I
-{
-	public void m1()
-	{
-		System.out.println("M1 in C");
-	}
-	public void m2()
-	{
-		System.out.println("M2 in C");
-	}
-	public void m3()
-	{
-		System.out.println("M3 in C");
-	}
-}
+package com.Jsp.StringProg;
+
 public class Test_3 {
-	public static void main(String[] args) {
-		I[] a=new I[5];
-		a[0]=new B();
-		a[1]=new C();
-		a[2]=new B();
-		a[3]=new C();
-		a[4]=new B();
+	public static void main(String[] args)
+	{
+		String s1="java"+"dev";
+		String s2="dev";
+		String s3="java"+s2;
+		String s4="javadev";
 		
-		for(I obj:a)
-		{
-			obj.m1();
-			if(obj instanceof B)
-			{
-				((B)obj).m2();
-			}
-			if(obj instanceof C)
-			{
-				((C)obj).m3();
-			}
-		}
+		System.out.println(s1==s3);
+		System.out.println(s1==s1);
+		System.out.println(s3==s4);
+		
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		System.out.println(s4);
 	}
 }
